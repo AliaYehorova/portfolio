@@ -71,15 +71,39 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
-
 .carousel {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+  }
+   
+  .carousel-inner {
+	display: flex;
+	width: 300%;
+	transition: transform 0.5s;
+  }
+   
+  .carousel-item {
+	flex: 1;
+	text-align: center;
+  }
+   
+  .carousel-item img {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+	cursor: pointer;
+  }
+
+/* carousel */
+/* .carousel {
     position: relative;
     width: 100%;
     max-width: 960px;
     margin: 20px auto;
     overflow: hidden;
 }
-/* carousel */
+
 .carousel-inner {
     display: flex;
     flex-wrap: wrap;
@@ -88,7 +112,7 @@ input, select, textarea {
 }
 
 .carousel-item {
-    flex: 1 1 calc(33.333% - 20px); /* 3 Bilder pro Reihe mit Abstand */
+    flex: 1 1 calc(33.333% - 20px); 
     box-sizing: border-box;
 }
 
@@ -96,7 +120,7 @@ input, select, textarea {
     width: 100%;
     height: auto;
     display: block;
-}
+} */
 
 /* Lightbox-Stil */
 .lightbox {

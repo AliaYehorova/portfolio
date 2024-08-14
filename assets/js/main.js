@@ -112,18 +112,17 @@ document.addEventListener('DOMContentLoaded', function () {
         index = (index < items.length - visibleItems) ? index + 1 : 0;
         updateCarousel();
     });
+
+ 	$('.carousel-item').on('click', function (event) {
+	 document.getElementById('lightbox-img').src = event.target.currentSrc;
+	 document.getElementById('lightbox').style.display = 'block';
+    
+    });
+	$('#lightbox').on('click', function(event) {
+		event.target.style.display = 'none';
+	})
 });
     
-    // Funktion zum Öffnen der Lightbox
-function openLightbox(imageSrc) {
-    document.getElementById('lightbox-img').src = imageSrc;
-    document.getElementById('lightbox').style.display = 'block';
-}
-
-// Funktion zum Schließen der Lightbox
-function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-}
     
 	// Menu.
 		var $menu = $('#menu');
